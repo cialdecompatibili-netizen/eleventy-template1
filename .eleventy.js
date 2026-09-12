@@ -1,4 +1,3 @@
-const { HtmlBasePlugin } = require("@11ty/eleventy");
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const imageShortcode = require('./src/_11ty/shortcodes/image-shortcode');
@@ -13,7 +12,6 @@ module.exports = function (eleventyConfig) {
   // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(HtmlBasePlugin);
 
   // Filters
   eleventyConfig.addFilter('markdown', markdownFilter);
