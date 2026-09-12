@@ -6,14 +6,14 @@ pagination:
 permalink: /project-tags/{{ tag }}/
 layout: base.njk
 renderData:
-  title: "Projects tagged “{{ tag }}”"
-  metaDescription: "All projects tagged with “{{ tag }}”"
+  title: "Progetti con tag “{{ tag }}”"
+  metaDescription: "Tutti i progetti con il tag “{{ tag }}”"
 ---
 <div class="page-container">
   {# Header #}
   <div class="tag-list tag-list--no-wrap">
-    <h4 class="tag-list__title">Projects Tagged: "{{ tag | capitalize }}"</h4>
-    <a class="btn btn--sm btn--danger" href="{{ '/projects' | url }}">Remove Tag</a>
+    <h4 class="tag-list__title">Progetti con tag: "{{ tag | capitalize }}"</h4>
+    <a class="btn btn--sm btn--danger" href="{{ '/projects' | url }}">Rimuovi tag</a>
   </div>
 
   {# Projects #}
@@ -22,6 +22,6 @@ renderData:
 
   {# Footer #}
   <nav>
-    <a href="{{ '/projects/' | url }}">← View All Projects</a>
+    <a href="{{ '/projects/' | url }}">← Vedi tutti i progetti</a>
   </nav>
 </div>

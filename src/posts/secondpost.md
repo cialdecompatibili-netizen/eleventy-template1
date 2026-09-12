@@ -1,14 +1,14 @@
 ---
-title: This is the second example post
+title: Questo è il secondo articolo di esempio
 date: 2020-01-01T08:00:00.000Z
-summary: Bring to the table win-win survival strategies to ensure proactive domination.
+summary: Un breve riassunto di esempio per il secondo articolo del blog.
 tags:
   - sport
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Un paragrafo introduttivo di esempio, utile per vedere come appare un testo normale in questo secondo articolo dimostrativo del blog.
 
-## Section Header
+## Titolo di sezione
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+Un secondo paragrafo di esempio dopo il titolo di sezione, per mostrare la struttura tipica di un articolo con più blocchi di contenuto.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+Un terzo e ultimo paragrafo di chiusura, solo per riempire lo spazio e mostrare la spaziatura tra i blocchi di testo nell'articolo.

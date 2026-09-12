@@ -1,28 +1,27 @@
 ---
-title: Cat Translation API
+title: API Traduzione Gatti
 emoji: 😺
 date: 2019-01-01T00:00:00.000Z
-summary: API to translate cat speech to english
-metaDescription: This is a sample meta description. If one is not present in
-  your page/project's front matter, the default metadata.desciption will be used
-  instead.
+summary: API per tradurre il linguaggio dei gatti in italiano
+metaDescription: Questa è una meta description di esempio. Se non presente nel
+  front matter della pagina/progetto, verrà usata quella predefinita in metadata.
 tags:
   - golang
   - graphQL
   - aws
 ---
 
-### Task
+### Obiettivo
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Un paragrafo di esempio che descrive l'obiettivo del progetto, utile per mostrare come appare la sezione "Obiettivo" in una scheda progetto.
 
-### Solution
+### Soluzione
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+Un paragrafo di esempio che descrive la soluzione adottata, per mostrare come appare la sezione "Soluzione" in una scheda progetto, con qualche riga in più di contesto dimostrativo.
 
-#### I﻿mage Uploaded to CMS:
-![cat relaxing](/src/assets/img/1177px-cat_august_2010-4.jpg)
+#### I﻿mmagine caricata sul CMS:
+![gatto rilassato](/src/assets/img/1177px-cat_august_2010-4.jpg)
 
-#### Remote Image:
-![cat in snow](https://upload.wikimedia.org/wikipedia/commons/b/b6/Felis_catus-cat_on_snow.jpg)
+#### Immagine remota:
+![gatto nella neve](https://upload.wikimedia.org/wikipedia/commons/b/b6/Felis_catus-cat_on_snow.jpg)
 

@@ -1,27 +1,27 @@
 ---
-title: This post contains a code sample
-metaDescription: Add code samples to your markdown files
+title: Questo articolo contiene un esempio di codice
+metaDescription: Aggiungi esempi di codice ai tuoi file markdown
 date: 2019-01-01T00:00:00.000Z
-summary: Add code samples to your markdown files
+summary: Aggiungi esempi di codice ai tuoi file markdown
 tags:
   - tech
   - environment
   - politics
   - sport
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Un breve testo introduttivo di esempio, utile per mostrare come appare un paragrafo normale in un articolo del blog, con qualche riga di contesto generico prima di passare a un esempio pratico.
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+Questo secondo paragrafo serve solo a riempire lo spazio e mostrare la spaziatura tra i blocchi di testo, così puoi farti un'idea di come apparirà un articolo reale una volta pubblicato.
 
-## Section Header
+## Titolo di sezione
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+Un altro paragrafo di esempio, questa volta dopo un titolo di sezione, per mostrare come Eleventy gestisce gli heading markdown all'interno del contenuto di un post.
 
 ```js
-// this is a command
+// questo è un comando
 function myCommand() {
 	let counter = 0;
 	counter++;
 }
 ```
-Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Un ultimo paragrafo di chiusura per l'articolo, dopo il blocco di codice, a scopo puramente dimostrativo.

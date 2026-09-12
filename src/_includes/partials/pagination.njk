@@ -3,7 +3,7 @@
     <ol class="pagination__list">
     {% if pagination.href.previous %}
       <li class="pagination__item">
-        <a class="pagination__link" href="{{pagination.href.previous}}">Previous</a>
+        <a class="pagination__link" href="{{pagination.href.previous}}">Precedente</a>
       </li>
     {% endif %}
     {%- for pageEntry in pagination.pages %}
@@ -20,7 +20,7 @@
     {%- endfor %}
     {% if pagination.href.next %}
       <li class="pagination__item">
-        <a class="pagination__link" href="{{pagination.href.next}}">Next</a>
+        <a class="pagination__link" href="{{pagination.href.next}}">Successivo</a>
       </li>
     {% endif %}
     </ol>

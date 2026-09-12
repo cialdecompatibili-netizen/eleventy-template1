@@ -1,13 +1,13 @@
 ---
-title: Images can be added to posts
+title: Le immagini possono essere aggiunte agli articoli
 date: 2020-02-03T08:00:00.000Z
-summary: Add an image to your post
+summary: Aggiungi un'immagine al tuo articolo
 tags:
   - environment
   - politics
 ---
-The below image was added using Netlify CMS and is stored in your git repo.
+L'immagine qui sotto è stata aggiunta usando Netlify CMS ed è salvata nel tuo repo git.
 
-![Fern](/src/assets/img/fern-in-hand.jpeg "Fern")
+![Felce](/src/assets/img/fern-in-hand.jpeg "Felce")
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+Un paragrafo di testo di esempio dopo l'immagine, per mostrare come il contenuto continua a scorrere normalmente anche dopo un'immagine inserita nell'articolo.

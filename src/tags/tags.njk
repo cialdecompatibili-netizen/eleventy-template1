@@ -6,13 +6,13 @@ pagination:
 permalink: /tags/{{ tag }}/
 layout: base.njk
 renderData:
-  title: "Posts tagged “{{ tag }}”"
-  metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
+  title: "Articoli con tag “{{ tag }}”"
+  metaDescription: "Tutti gli articoli del Blog con il tag “{{ tag }}”"
 ---
 <div class="page-container">
   <div class="tag-list tag-list--no-wrap">
-    <h3 class="tag-list__title">Articles Tagged: "{{ tag | capitalize }}"</h3>
-    <a class="btn btn--sm btn--danger" href="{{ '/blog' | url }}">Remove Tag</a>
+    <h3 class="tag-list__title">Articoli con tag: "{{ tag | capitalize }}"</h3>
+    <a class="btn btn--sm btn--danger" href="{{ '/blog' | url }}">Rimuovi tag</a>
   </div>
 
   {% from "macros/articlelist.njk" import articlelist %}
@@ -22,6 +22,6 @@ renderData:
   ) }}
 
   <nav>
-    <a href="{{ '/blog/' | url }}">← View All Articles</a>
+    <a href="{{ '/blog/' | url }}">← Vedi tutti gli articoli</a>
   </nav>
 </div>

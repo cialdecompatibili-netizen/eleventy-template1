@@ -1,31 +1,31 @@
 ---
-title: About Me
+title: Chi sono
 subtitle: ""
-metaDescription: This page is all about me
+metaDescription: Questa pagina parla di me
 date: 2017-01-01T00:00:00.000Z
 permalink: /about/index.html
 eleventyNavigation:
-  key: About
+  key: Chi sono
   order: 1
 ---
 
-### What is Fernfolio?
-An [Eleventy](https://www.11ty.io/) theme designed to simplify the process of creating a beautiful portfolio and blog. Tightly integrated with [Netlify CMS](https://www.netlifycms.org/) for flexible, Git-powered content management.
+### Cos'è Fernfolio?
+Un tema [Eleventy](https://www.11ty.io/) pensato per semplificare la creazione di un bel portfolio e blog. Fortemente integrato con [Netlify CMS](https://www.netlifycms.org/) per una gestione contenuti flessibile, basata su Git.
 
-### Why create this?
+### Perché l'ho creato?
 
-**Reason #1:** I wanted a portfolio that was simple, fast, accessible, and integrated with a git-powered cms. Existing templates didn't perfectly fit my needs, so I decided to build my own template.
+**Motivo #1:** volevo un portfolio semplice, veloce, accessibile e integrato con un CMS basato su git. I template esistenti non si adattavano perfettamente alle mie esigenze, quindi ho deciso di costruire il mio.
 
-**Reason #2:** I wanted to learn more about [Eleventy](https://www.11ty.dev/) and static site generators in general. Building Fernfolio was a good excuse to dive deeper on that topic.
+**Motivo #2:** volevo approfondire [Eleventy](https://www.11ty.dev/) e i generatori di siti statici in generale. Costruire Fernfolio è stata una buona scusa per approfondire l'argomento.
 
-### How do I edit content?
-Once your site is deployed and configured, add `/admin` to the end of the url (not using localhost) and hit refresh. From there, you should be able to login and see see the content management dashboard. You should be able to change most content here (e.g. page text, images, logo, articles, projects, etc.).
+### Come modifico i contenuti?
+Una volta che il sito è pubblicato e configurato, aggiungi `/admin` alla fine dell'url (non su localhost) e ricarica. Da lì potrai accedere e vedere la dashboard di gestione contenuti. Potrai modificare la maggior parte dei contenuti da qui (es. testi delle pagine, immagini, logo, articoli, progetti, ecc.).
 
-### Further customizations
-If you want to take your customizations further, you will need to modify the project source code. Some customizations, like changing theme colors and fonts, are straightforward (those can be modified in the `variables.scss` file). Other customizations will require more in-depth solutions.
+### Personalizzazioni avanzate
+Se vuoi spingere oltre le personalizzazioni, dovrai modificare il codice sorgente del progetto. Alcune personalizzazioni, come cambiare colori e font del tema, sono semplici (si modificano nel file `variables.scss`). Altre richiedono soluzioni più approfondite.
 
-If you get stuck or just have a question, feel free to create a [Github issue](https://github.com/TylerMRoderick/fernfolio-11ty-template/issues) and I will try to point you in the right direction.
+Se ti blocchi o hai solo una domanda, crea pure una [issue su Github](https://github.com/TylerMRoderick/fernfolio-11ty-template/issues) e proveremo a indicarti la strada giusta.
 
-Thanks for checking out Fernfolio 👋 - [Tyler M. Roderick](https://www.tylerroderick.com/)
+Grazie per aver dato un'occhiata a Fernfolio 👋 - [Tyler M. Roderick](https://www.tylerroderick.com/)
 
 ![Fern in Hand](/src/assets/img/fern-forest.jpeg "Fern in Hand")
