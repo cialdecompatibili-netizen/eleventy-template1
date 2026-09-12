@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
+  name: github
+  repo: cialdecompatibili-netizen/eleventy-template1
+  branch: main
 
 # Uncomment below to enable drafts
 # publish_mode: editorial_workflow
