@@ -1,5 +1,7 @@
 const Image = require("@11ty/eleventy-img");
 
+const pathPrefix = process.env.PATH_PREFIX || "/";
+
 async function imageShortcode(src, alt, sizes, classes, loading = "lazy") {
   // Remove leading slash if it exists
   src = src.startsWith("/") ? src.slice(1) : src;
@@ -7,7 +9,7 @@ async function imageShortcode(src, alt, sizes, classes, loading = "lazy") {
   let metadata = await Image(src, {
     widths: [25, 320, 640, 960, 1200, 1800, 2400],
     formats: ["webp", "jpeg"],
-    urlPath: "/assets/img/",
+    urlPath: pathPrefix.replace(/\/?$/, "/") + "assets/img/",
     outputDir: "_site/assets/img/",
   });
 

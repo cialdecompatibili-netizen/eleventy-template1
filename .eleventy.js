@@ -48,6 +48,7 @@ module.exports = function (eleventyConfig) {
     htmlTemplateEngine: 'njk',
     dataTemplateEngine: 'njk',
     passthroughFileCopy: true,
+    pathPrefix: process.env.PATH_PREFIX || '/',
     dir: {
       input: 'src',
       layouts: "_layouts"

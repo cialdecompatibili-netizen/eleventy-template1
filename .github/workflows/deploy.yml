@@ -24,6 +24,8 @@ jobs:
           node-version: '18'
       - run: npm install
       - run: npm run build:eleventy
+        env:
+          PATH_PREFIX: /eleventy-template1/
       - run: npm run build:sass
       - run: npm run build:scripts
       - run: npx postcss "_site/assets/css/*.css" -u autoprefixer cssnano -r --no-map
