@@ -1,6 +1,6 @@
 # Eleventy Template — AGENT.md
 
-Progetto: sito Fernfolio (Eleventy) reso base clonabile per futuri siti.
+Progetto: sito Fernfolio (Eleventy), tradotto integralmente in italiano.
 Repo GitHub: https://github.com/cialdecompatibili-netizen/eleventy-template1
 Sito live: https://cialdecompatibili-netizen.github.io/eleventy-template1/
 Editor contenuti: https://cialdecompatibili-netizen.github.io/eleventy-template1/admin/
@@ -17,14 +17,38 @@ Cartella locale: C:\Users\mirco\Desktop\Eleventy
 ## Come funziona il flusso (100% automatico, zero build locale)
 
 1. Modifichi contenuti dal browser su /admin (login con token GitHub, vedi sotto)
-2. Sveltia CMS fa commit diretto sul repo GitHub (branch main)
+   OPPURE via script Python (vedi sezione Automazione qui sotto)
+2. Il commit arriva sul repo GitHub (branch main)
 3. GitHub Actions parte da solo, builda con Eleventy+Sass+esbuild
 4. Il sito si ripubblica da solo su GitHub Pages in 1-2 minuti
 
-Non serve mai lavorare in locale. La cartella locale serve solo da
-riferimento/appunti per le sessioni future con Claude.
+## 🐍 Automazione — cartella automation/
 
-## Autenticazione editor /admin
+### publish.py — creare NUOVI articoli o progetti
+```
+python automation\publish.py articolo "Titolo" "riassunto" "corpo markdown" [tag1,tag2]
+python automation\publish.py progetto "Titolo" "emoji" "riassunto" "corpo markdown" [tag1,tag2]
+```
+Genera slug, crea il file .md in src/posts/ o src/projects/ con front matter
+corretto, fa git add+commit+push in automatico. Richiede git configurato in
+locale con credenziali salvate (già presente su questo PC).
+
+### fastfix.py — modificare file ESISTENTI (css, njk, layout, json)
+Push diretto via API GitHub REST, NIENTE git/rebase/conflitti. Usa il token
+in automation\.env (NON committato, è in .gitignore).
+```
+python automation\fastfix.py get <path_nel_repo>
+python automation\fastfix.py replace <path_nel_repo> "<vecchio_testo>" "<nuovo_testo>"
+python automation\fastfix.py push <path_nel_repo> <path_file_locale> "<messaggio>"
+python automation\fastfix.py delete <path_nel_repo> "<messaggio>"
+```
+Esempio: `python automation\fastfix.py get src/_data/home.json`
+
+Token: stesso account cialdecompatibili-netizen, riusato da
+onepagecmspush\.git\config (vedi progetti.md regola 13.7). Verificato con
+permessi push=True sul repo eleventy-template1 (12/09/2026).
+
+## Autenticazione editor /admin (Sveltia CMS)
 
 Sveltia CMS usa un GitHub Personal Access Token (NON OAuth, niente proxy
 esterno da hostare). Il token:
@@ -67,14 +91,22 @@ esterno da hostare). Il token:
    drawer.njk (menu mobile) aveva ANCHE una voce "Home" scritta a mano.
    Rimossa quella statica, ora usa solo il loop dinamico su navPages.
 
+6. **Traduzione completa IT (12/09/2026)**: tradotto tutto il sito — home,
+   menu (Chi sono/Blog/Progetti/Contatti), tutte le pagine, 5 articoli demo,
+   3 progetti demo, footer, form contatti, paginazione, 404, pagine tag.
+   Cambiato anche lang="en" -> lang="it" in base.njk (SEO). Fatto in UNA
+   volta sola (edit_block chirurgici su ogni file), commit 174ea0d.
+   Contenuti FUTURI vanno scritti direttamente in italiano con publish.py,
+   non serve ritradurre nulla.
+
 ## Struttura contenuti (dove editare cosa)
 
-- src/_data/home.json — testo hero homepage
+- src/_data/home.json — testo hero homepage (IT)
 - src/_data/global.json — impostazioni tema (dark/light, logo, icone)
-- src/_data/metadata.json — title/description SEO globali
-- src/posts/*.md — articoli blog (collection "post" / "article")
-- src/projects/*.md — progetti portfolio (collection "project")
-- src/pages/*.md — pagine statiche (about, blog, projects, contact) —
+- src/_data/metadata.json — title/description SEO globali (IT)
+- src/posts/*.md — articoli blog (collection "post" / "article") — IT
+- src/projects/*.md — progetti portfolio (collection "project") — IT
+- src/pages/*.md — pagine statiche (about, blog, projects, contact) — IT,
   ognuna ha eleventyNavigation nel front matter per comparire nel menu
 - src/admin/config.yml — schema del CMS Sveltia (collections, campi)
 
@@ -86,10 +118,10 @@ esterno da hostare). Il token:
    nome repo (es. /nuovo-sito-nome/)
 4. Modifica src/admin/config.yml: cambia "repo:" col nuovo nome repo
 5. Attiva GitHub Pages nelle Settings del nuovo repo (Source: GitHub
-   Actions) — oppure via API come fatto qui (vedi sessione precedente
-   per il comando PowerShell/API REST usato)
+   Actions)
 6. Personalizza src/_data/*.json con contenuti del nuovo sito
-7. Genera un nuovo Personal Access Token per l'editor (o riusa quello
+7. Aggiorna automation/config.json col nuovo owner/repo
+8. Genera un nuovo Personal Access Token per l'editor (o riusa quello
    esistente se ha accesso a tutti i repo dell'account)
 
 ## Limiti noti / cose da migliorare in futuro
@@ -99,7 +131,9 @@ esterno da hostare). Il token:
   evitare tutti i filtri | url manuali)
 - pathPrefix hardcoded nel workflow, va cambiato a mano ad ogni clone
 - Questo è un template PORTFOLIO, non e-commerce: nessun carrello,
-  checkout, categorie prodotto. Per un e-commerce vero, discussione
-  precedente ha valutato: estendere CartaCMS (soluzione preferita da
-  Mirco, riusa stack PHP esistente) vs Eleventy+Snipcart vs backend
-  headless (Medusa/Saleor) — decisione non ancora presa
+  checkout, categorie prodotto. Per un e-commerce vero, la scelta
+  migliore resta CartaCMS (stack PHP già esistente, riusabile) — Eleventy
+  qui non è competitivo su questo fronte
+- Confronto Jekyll (cmspush3) vs Eleventy fatto in sessione: Jekyll vince
+  su velocità operativa perché ha già publish.py/fastfix.py collaudati
+  da mesi; Eleventy ha automazione equivalente solo da oggi (12/09/2026)
