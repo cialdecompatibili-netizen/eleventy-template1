@@ -9,7 +9,7 @@ eleventyNavigation:
   order: 1
 ---
 
-### Cos'è Fernfolio? Ottimo
+### Cos'è Fernfolio? Ottimo ok
 
 Un tema [Eleventy](https://www.11ty.io/) pensato per semplificare la creazione di un bel portfolio e blog. Fortemente integrato con [Netlify CMS](https://www.netlifycms.org/) per una gestione contenuti flessibile, basata su Git.
 
